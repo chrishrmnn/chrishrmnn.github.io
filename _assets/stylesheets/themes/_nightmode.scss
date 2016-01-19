@@ -1,0 +1,70 @@
+/*boby*/.nightmode {
+	background: darken($c-primary, 20%);
+	color: darken(#EDECE8, 10%);
+
+
+	.header {
+		border-bottom-color: rgba(#fff, .08);
+	}
+
+	.posts-list {
+		li {
+			+ li {
+				border-top-color: rgba(#fff, .08);
+			}
+		}
+	}
+
+	.post {
+		&__title {
+			color: lighten($c-primary, 30%);
+
+			&:after {
+				background-color: lighten($c-primary, 30%);
+			}
+		}
+
+		&__footer {
+			border-top-color: rgba(#fff, .08);
+		}
+	}
+
+
+	/* Link */
+	a {
+		color: lighten($c-primary, 30%);
+
+		&:after {
+			background-color: rgba(#fff, .08);
+		}
+	}
+
+	/* List */
+	.post {
+		ul {
+			li {
+				&:before {
+					border-color: lighten($c-primary, 30%);
+				}
+			}
+		}
+
+		ol {
+			li {
+				&:before {
+					color: lighten($c-primary, 30%);
+				}
+			}
+		}
+
+
+		blockquote {
+			border-left-color: lighten($c-primary, 30%);
+		}
+	}
+
+
+	.footer {
+		background-color: rgba(#fff, .05);
+	}
+}

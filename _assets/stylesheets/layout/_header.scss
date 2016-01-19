@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+.header {
+	padding: 1.6em;
+	position: relative;
+	margin-bottom: calc(1.6em - .1111em);
+	border-bottom: 1px solid rgba(#000, .06);
+
+	&__logo {
+		display: block;
+		width: calc(1.6em * 3);
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	&-nightmode {
+		background-color: transparent;
+		padding: 0;
+		border: 0;
+		position: fixed;
+		bottom: .5em;
+		right: .5em;
+
+		&[data-mode="night"] {
+			.header-nightmode__night {
+				display: none;
+			}
+		}
+		&[data-mode="day"] {
+			.header-nightmode__day {
+				display: none;
+			}
+		}
+	}
+
+
+	@include mq($from: tablet){
+		&-nightmode {
+			bottom: 1em;
+			right: 2em;
+		}
+	}
+}
+
+
+
+
+
+/**
+* MAIN NAVIGATION
+*/
+.main-nav {
+	text-align: right;
+}

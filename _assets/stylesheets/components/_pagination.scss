@@ -1,0 +1,25 @@
+
+.pagination {
+	@extend %unstyled-list;
+	@extend %clearfix;
+	margin-top: 4.114em;
+	font-size: .775em;
+	line-height: 2.057em;
+
+	&__prev {
+		float: left;
+		width: 40%;
+	}
+
+	&__next {
+		text-align: right;
+		float: right;
+		width: 40%;
+	}
+
+	a {
+		text-transform: uppercase;
+		font-family: $ff-sans-serif;
+		font-weight: bold;
+	}
+}

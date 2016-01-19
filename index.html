@@ -1,0 +1,45 @@
+---
+layout: default
+sitemap: false
+---
+  {% if paginator.page != 1 %}
+    <h1>Page <sup>{{ paginator.page }}</sup>/<sub>{{ paginator.total_pages }}</sub></h1>
+  {% endif %}
+
+  <ul class="posts-list">
+    {% for post in paginator.posts %}
+      <li>
+        <article class="post-preview">
+          <time  datetime="{{ post.date | date_to_xmlschema }}" class="post__meta">
+            <span class="sr-only">Posté le</span>
+            {% include date.html date=post.date %}
+          </time>
+          <span class="post__meta">
+            <span class="sr-only">Temps de lecture estimé</span>
+            {% include readtime.html content=post.content %}
+          </span>
+
+          <h2 class="post__title">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+
+          <div class="post__summary">
+            {{ post.excerpt }}
+          </div>
+ 
+          <a href="{{ post.url }}" class="post__more">Lire l'article <span class="sr-only">{{ post.title }}</span>›</a>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Pagination links -->
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+      <li class="pagination__prev"><a href="{{ paginator.previous_page_path }}">‹ Previous</a></li>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <li class="pagination__next"><a href="{{ paginator.next_page_path }}">Next ›</a></li>
+    {% endif %}
+  </ul>
