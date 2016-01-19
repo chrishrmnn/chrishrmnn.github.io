@@ -41,4 +41,3 @@ author:
 assets:
   js_compressor: 	uglifier
   css_compressor: 	sass
-  cache: 			_cache/

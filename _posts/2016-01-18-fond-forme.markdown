@@ -155,3 +155,5 @@ Bravo, vous êtes arrivé jusqu'à la fin ! Il faut dire que je ne vous ai pas �
 [compress-html]: http://jch.penibelst.de/
 [sitemap]: http://digitalshore.io/build-jekyll-sitemap-without-plugin/
 [readtime]: http://carlosbecker.com/posts/jekyll-reading-time-without-plugins/
+[github-site]: https://github.com/chrishrmnn/chrishrmnn.github.io/
+[github-tickets]: https://github.com/chrishrmnn/chrishrmnn.github.io/issues
