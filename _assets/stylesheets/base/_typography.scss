@@ -17,11 +17,8 @@ body {
 	color: $c-txt;
     line-height: 1.6;
     background-color: #edece8;
-    
+    transition: background-color 270ms ease-in, color 270ms ease-in;
 
-    &.smooth-mode {
-        transition: background-color 270ms ease-in, color 270ms ease-in;
-    }
 
     &.has-vertical-rhythm {
         background: linear-gradient(to bottom, #BA9B9A .1em, transparent .1em ) #edece8;
@@ -305,6 +302,7 @@ a {
     color: $c-link;
     position: relative;
     text-decoration: none;
+    transition: color 100ms ease-in;
 
     &:after {
         content: '';
