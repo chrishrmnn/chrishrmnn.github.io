@@ -57,7 +57,7 @@ Derrière la forme, se cache le fond. Dans cette partie, je vais dans un premier
 
 ### Une intégration aux petits oignons 
 
-L'intégration Web, c'est mon dada. J'en fait au quotidien depuis plusieurs années et depuis plusieurs mois, j'attache une importance particulière à la qualité Web. Cependant, c'est la première fois que je design directement dans le navigateur. Il m'arrive de décliner des designs existants mais c'est la première fois que je commence à zéro dans mon éditeur de texte !
+L'intégration Web, c'est mon dada. J'en fait au quotidien depuis plusieurs années et depuis plusieurs mois, j'attache une importance particulière à la qualité Web. Cependant, c'est la première fois que je design directement dans le navigateur. Il m'arrive de décliner des designs existants mais c'est la première fois que je commence de zéro dans mon éditeur de texte !
 
 J'ai l'habitude de toujours avoir une maquette, c'est assez perturbant de n'avoir aucun élement sur lequel se baser dans un moment d'hésitation. J'avais gribouillé une structure sur une feuille de papier, ça m'a servi pour la structure générale mais lorsqu'il s'agit de travailler sur les petits détails, le _wireframe_ n'a plus trop d'intérêt.
 
@@ -155,5 +155,5 @@ Bravo, vous êtes arrivé jusqu'à la fin ! Il faut dire que je ne vous ai pas �
 [compress-html]: http://jch.penibelst.de/
 [sitemap]: http://digitalshore.io/build-jekyll-sitemap-without-plugin/
 [readtime]: http://carlosbecker.com/posts/jekyll-reading-time-without-plugins/
-[github-site]: https://github.com/chrishrmnn/chrishrmnn.github.io/
+[github-site]: https://github.com/chrishrmnn/chrishrmnn.github.io/tree/source
 [github-tickets]: https://github.com/chrishrmnn/chrishrmnn.github.io/issues
