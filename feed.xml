@@ -1,31 +1,133 @@
----
-layout: null
-sitemap: false
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Au Front - Blog d&#39;un intégrateur et designer front-end</title>
+    <description>HTML, CSS, JS</description>
+    <link>http://blog.christophe-hermann.fr/</link>
+    <atom:link href="http://blog.christophe-hermann.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 03 Feb 2016 22:48:57 +0100</pubDate>
+    <lastBuildDate>Wed, 03 Feb 2016 22:48:57 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Le fond et la forme</title>
+        <description>&lt;p&gt;Il y a peu, je vous faisais part de mon &lt;a href=&quot;https://medium.com/@chrishrmnn/ce-soir-j-ai-décidé-d-écrire-9ec274e333a4&quot;&gt;envie d’écrire&lt;/a&gt;, j’ai donc depuis travaillé à la création ce blog afin de pouvoir partager quelques articles sur les sujets qui me tiennent à coeur, à savoir tout ce qui touche au “front-end”: du design à l’intégration en passant par l’expérience utilisateur mais je ne m’interdit pas de poster des articles plus généraliste.&lt;/p&gt;
+
+&lt;p&gt;Pour ce premier article, j’aimerais partager avec vous l’expérience de la création de ce blog et vous expliquer la philosophie que j’ai décidé de suivre. Je ne vais pas écrire d’article d’introduction, si vous souhaitez en savoir plus sur ce blog ou sur moi-même, je vous invite à consulter la page &lt;em&gt;A propos&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;la-forme&quot;&gt;La forme&lt;/h2&gt;
+
+&lt;p&gt;Dès que j’ai commencé à réfléchir à ce blog, j’ai très vite choisi de privilégier le contenu. Je voulais quelque chose d’agréable à lire et de lisible, peu importe le support sur lequel il est consulté. Malgré tout, je voulais quand même qu’on puisse m’identifier.&lt;/p&gt;
+
+&lt;p&gt;J’ai déjà une identité personnelle que j’ai créé il y a quelques années. Elle comprend un logo, des typos et des couleurs (que j’ai récemment rafraîchit, mais je vous avouerai que je ne suis pas totalement satisfait). Le choix a été fait d’utiliser ces élements comme base pour le blog.&lt;/p&gt;
+
+&lt;p&gt;Je ne suis passé par aucun logiciel de création graphique (Photoshop ou Sketch), la simplicité graphique du design m’a permis de travailler directement dans le navigateur. Un exercice intéressant.&lt;/p&gt;
+
+&lt;h3 id=&quot;la-typograhie&quot;&gt;La typograhie&lt;/h3&gt;
+
+&lt;p&gt;Les deux polices qui font partie de mon identité sont PT Sans et PT Serif, elles ont toutes les deux été créées par la fonderie &lt;a href=&quot;http://www.paratype.com/&quot;&gt;ParaType&lt;/a&gt;. L’une est la variante avec empattements de la première, elles fonctionnent donc très bien ensemble.&lt;/p&gt;
+
+&lt;p&gt;Pour des questions de lisibilité mais également d’affinité, j’ai choisi d’utiliser la version avec empattements pour les textes courants. La version sans sérif est utilisée pour les titres et les informations secondaires.&lt;/p&gt;
+
+&lt;h4 id=&quot;justification&quot;&gt;Justification&lt;/h4&gt;
+
+&lt;p&gt;Pour éviter de fatiguer l’oeil mais également pour améliorer le confort de lecture, il est important d’avoir des longueurs de lignes ni trop courte, ni trop longue. Il est conseillé d’avoir une justification entre 40 et 80 caractères. J’ai donc fait différents tests pour trouver l’harmonie entre la lisibilité et le “graphiquement joli”.&lt;/p&gt;
+
+&lt;p&gt;L’intégration du site étant entièrement réalisée en unité relative (em), le zoom n’affecte pas la justification qui est conservée.&lt;/p&gt;
+
+&lt;h4 id=&quot;rythme-vertical&quot;&gt;Rythme vertical&lt;/h4&gt;
+
+&lt;p&gt;Avoir de belles polices qui vont de paire et une bonne justification ne fait pas tout. Ce qui fait la différence c’est le rythme vertical, en effet il va assurer une harmonie générale et par ce fait rendre la lecture plus agréable.&lt;/p&gt;
+
+&lt;p&gt;Je ne vais pas vous faire un cours sur le rythme vertical, il existe de très bonnes ressources sur le sujet, mais pour vous expliquer rapidement, il s’agit d’ajuster la taille de police, la hauteur de ligne et les marges afin de rester aligner sur une grille typographique définie et ne pas écrire entre les lignes.&lt;/p&gt;
+
+&lt;p&gt;C’est un exercice qui peut s’avérer complexe, surtout si comme moi vous n’aimez pas les maths. Bien heureusement il existe des outils qui vous permettent de calculer ce rythme. Je me suis servi de l’outil &lt;a href=&quot;http://soqr.fr/vertical-rhythm/&quot;&gt;Vertical Rhythm Tool&lt;/a&gt; pour générer une base que j’ai ensuite adapté en fonction du design. Pour m’assurer que le rythme était toujours respecté, j’ai &lt;a href=&quot;http://www.nicolas-hoffmann.net/source/1582-astuce-pour-tester-votre-rythme-vertical-en-CSS.html&quot;&gt;affiché la grille typographique&lt;/a&gt; grâce à une petite astuce découvert chez &lt;a href=&quot;https://twitter.com/nico3333fr&quot;&gt;Nicolas Hoffmann&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il reste cependant un point en suspens à ce sujet. Comment rétablir le rythme vertical après l’insertion d’un média (image, vidéo) ? Si vous avez la réponse ou des pistes, je suis preneur !&lt;/p&gt;
+
+&lt;h3 id=&quot;mode-nuit&quot;&gt;Mode nuit&lt;/h3&gt;
+
+&lt;p&gt;Pour rendre l’expérience de lecture encore plus agréable, j’ai également créé un mode nuit qui pourra être activé par l’utilisateur (en attendant un support correct de l’&lt;a href=&quot;https://developer.mozilla.org/fr/docs/WebAPI/Utiliser_les_%C3%A9v%C3%A9n%C3%A9ments_de_luminosit%C3%A9&quot;&gt;API Ambient Light&lt;/a&gt;) en cliquant sur la petite icône en bas à droite. Si l’environnement dans lequel l’utilisateur se trouve est faible en lumière, il sera plus agréable de lire sur un fond sombre.&lt;/p&gt;
+
+&lt;h2 id=&quot;le-fond&quot;&gt;Le fond&lt;/h2&gt;
+
+&lt;p&gt;Derrière la forme, se cache le fond. Dans cette partie, je vais dans un premier temps parler de l’intégration puis de Jekyll, le moteur qui me permet de générer les différentes pages et articles.&lt;/p&gt;
+
+&lt;h3 id=&quot;une-intgration-aux-petits-oignons&quot;&gt;Une intégration aux petits oignons&lt;/h3&gt;
+
+&lt;p&gt;L’intégration Web, c’est mon dada. J’en fait au quotidien depuis plusieurs années et depuis plusieurs mois, j’attache une importance particulière à la qualité Web. Cependant, c’est la première fois que je design directement dans le navigateur. Il m’arrive de décliner des designs existants mais c’est la première fois que je commence de zéro dans mon éditeur de texte !&lt;/p&gt;
+
+&lt;p&gt;J’ai l’habitude de toujours avoir une maquette, c’est assez perturbant de n’avoir aucun élement sur lequel se baser dans un moment d’hésitation. J’avais gribouillé une structure sur une feuille de papier, ça m’a servi pour la structure générale mais lorsqu’il s’agit de travailler sur les petits détails, le &lt;em&gt;wireframe&lt;/em&gt; n’a plus trop d’intérêt.&lt;/p&gt;
+
+&lt;p&gt;L’expérience a été vraiment intéressante, il y a des chances que je la renouvelle mais je pense qu’elle a ses limites. Par exemple, pour un site riche graphiquement, j’ai des doutes sur son efficacité. Cette méthode demande aussi plus de temps dans la phase d’intégration puisqu’il faut lui associer la phase de design, qui en temps normal est traitée en amont (mais toujours avec un intégrateur pas très loin évidemment).&lt;/p&gt;
+
+&lt;h4 id=&quot;abbr-titlehypertext-markup-languagehtmlabbr-et-smantique&quot;&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt; et sémantique&lt;/h4&gt;
+
+&lt;p&gt;Comme a mon habitude, j’ai pris soin de ma structure &lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt; et sa sémantique. L’apport de la sémantique est souvent négligé mais elle a des apports sur des nombreux points, notamment sur l’accessibilité et le référencement. Pour apporter encore plus de sens au contenu, j’ai également utilisé les &lt;a href=&quot;http://www.alsacreations.com/article/lire/1509-microdata-microformats-schema-semantique.html&quot;&gt;Microdatas&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;accessibilit&quot;&gt;Accessibilité&lt;/h4&gt;
+
+&lt;p&gt;Le Web est un endroit génial, pour que cet endroit profite à tout à chacun, j’essaye de rendre accessible le plus possible tout ce que je produit.&lt;/p&gt;
+
+&lt;p&gt;J’ai mis en place des liens d’évitement pour accéder directement au menu et au contenu. J’ai apporté un peu de sens à différents élements qui visuellement sont facilement compréhensible mais qui le sont moins lorsque l’utilisateur utilise un lecteur d’écran. Par exemple pour le temps de lecture, un élement &lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt; invisble à l’oeil mais qui sera lu par les lecteurs d’écrans précise qu’il s’agit du &lt;em&gt;temps de lecture estimé&lt;/em&gt;, c’est déjà plus compréhensible qu’un simple &lt;em&gt;3 minutes&lt;/em&gt;, non ?&lt;/p&gt;
+
+&lt;p&gt;Je ne suis pas un expert sur le sujet, il y a donc forcément des choses qui sont encore améliorables, je suis ouvert à vos propositions.&lt;/p&gt;
+
+&lt;h4 id=&quot;un-peu-de-style&quot;&gt;Un peu de style&lt;/h4&gt;
+
+&lt;p&gt;Les styles ont été produit en passant par le pré-processeur &lt;abbr title=&quot;Syntactically Awesome Style Sheets&quot;&gt;SASS&lt;/abbr&gt;. Je vous avouerais que j’ai vraiment du mal à m’en passer.&lt;/p&gt;
+
+&lt;p&gt;Comme je le disais plus haut, toute l’intégration a été réalisée en unité relative (em). Les avantages de cette technique sont nombreux, je vous renvoie à la &lt;a href=&quot;http://lanyrd.com/2013/parisweb/sckdfg/&quot;&gt;conférence de Nicolas Hoizey&lt;/a&gt; sur le sujet si vous souhaitez en savoir plus.&lt;/p&gt;
+
+&lt;p&gt;J’ai aussi commencé à suivre les recommandations du guide de style &lt;a href=&quot;http://sass-guidelin.es/fr/&quot;&gt;Sass Guidelines&lt;/a&gt; pour structurer mes fichiers, je vais appliquer les autres règles de ce guide dans un futur proche. J’applique déjà les recommandations de &lt;a href=&quot;http://cssguidelin.es/&quot;&gt;CSS Guidelines&lt;/a&gt; à mes feuilles de style. Je vous encourage vraiment à prendre un peu de temps de votre temps pour lire et si possible appliquer ce que vous pourrez trouver dans ces deux guides. L’objectif est d’harmoniser l’écriture des CSS pour arrêter de s’arracher les cheveux lorsqu’on récupère le code d’un autre intégrateur / développeur.&lt;/p&gt;
+
+&lt;h3 id=&quot;le-statique-cest-fantastique&quot;&gt;Le statique, c’est fantastique&lt;/h3&gt;
+
+&lt;p&gt;Qui dit blog, dit très souvent WordPress. J’ai été tenté par cette solution au départ, mais je voulais quelque chose de léger et si possible sans base de données, je cherchais également à toucher à quelque chose de nouveau. Mes recherches m’ont orienté vers &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jekyll c’est un générateur de sites statiques, il est écrit en Ruby, embarque le moteur de templating &lt;a href=&quot;https://github.com/Shopify/liquid/wiki&quot;&gt;Liquid&lt;/a&gt; (très proche de &lt;a href=&quot;http://twig.sensiolabs.org/&quot;&gt;Twig&lt;/a&gt;) et s’appuie sur &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; pour la rédaction des contenus. Un autre avantage, c’est qu’il est possible de déployer son site via les &lt;a href=&quot;https://pages.github.com/&quot;&gt;pages Github&lt;/a&gt;, méthode que j’ai choisi. Le code source du blog est donc entièrement disponible sur mon compte Github.&lt;/p&gt;
+
+&lt;p&gt;Bien que relativement complet par défaut, Jekyll n’embarque pas autant de fonctionnalité qu’un WordPress, ça peut-être considéré comme un défaut mais j’y vois plutôt un avantage. Je l’ai donc étoffé de quelques petits artifices pour l’adapter à mes besoins. Je me suis rapidement rendu compte que les ressources disponibles n’étaient pas aussi nombreuses que pour WordPress, Drupal ou Symfony2 par exemple.&lt;/p&gt;
+
+&lt;h4 id=&quot;performances&quot;&gt;Performances&lt;/h4&gt;
+
+&lt;p&gt;Même si le design est graphiquement léger, j’ai voulu optimiser les performances, notamment en agrégeant les ressources &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; et Javascript avant de les minifier. Pour ce faire, j’ai utilisé &lt;a href=&quot;https://github.com/jekyll/jekyll-assets&quot;&gt;Jekyll Assets&lt;/a&gt;, très simple d’utilisation une fois installé, il fait très bien son travail.&lt;/p&gt;
+
+&lt;p&gt;Liquid a le défaut de générer des espaces et des sauts de ligne important, pour palier à ce problème, j’ai &lt;a href=&quot;http://jch.penibelst.de/&quot;&gt;compressé le HTML&lt;/a&gt; grâce à une petite astuce qui consiste à créer un template qui va supprimer tous les sauts de ligne et espaces inutiles.&lt;/p&gt;
+
+&lt;p&gt;Autre petite astuce vraiment intéressante concernant les performances, bien qu’elle ne dépende pas directement de Jekyll. Le site étant statique, la gestion des commentaires n’est donc pas possible sans passer par un service tiers. J’ai opté pour Disqus, très répandu, il gère ça très bien. Le problème de ces partis tiers c’est qu’il faut placer un morceau de script dans la page pour qu’ils puissent fonctionner, ce qui peut avoir un impact sur le temps de chargement de la page. Les commentaires n’étant pas quelque chose de critique, ils ne sont pas affiché ni chargé par défaut mais uniquement lorsque l’utilisateur exprime l’envie de laisser un commentaire en cliquant sur le bouton adéquat. Un petit appel en &lt;abbr title=&quot;Asynchronous JavaScript and XML&quot;&gt;AJAX&lt;/abbr&gt; permet de charger le script nécessaire à l’affichage de la zone de commentaires.&lt;/p&gt;
+
+&lt;p&gt;Et enfin, les boutons de partage sur les réseaux sociaux n’utilisent pas de scripts tiers mais simplement une URL à laquelle il faut passer différents paramètres, on ne peut pas faire plus simple et c’est tout aussi efficace.&lt;/p&gt;
+
+&lt;p&gt;La dernière chose que je n’ai pas abordé dans cette partie concernant les performances, c’est les polices de caractères. Elles sont pour le moment chargées via Google Fonts, c’est temporaire je vous rassure. Le chargement des polices sur le Web est un sujet vraiment complexe, je vais prendre le temps de l’étudier et essayer de trouver la meilleure solution.&lt;/p&gt;
+
+&lt;h4 id=&quot;mais-aussi&quot;&gt;Mais aussi&lt;/h4&gt;
+
+&lt;p&gt;Pour aider les moteurs de recherche à indexer les différents articles ainsi que les pages, j’ai mis en place un &lt;a href=&quot;http://digitalshore.io/build-jekyll-sitemap-without-plugin/&quot;&gt;plan du site au format XML&lt;/a&gt; via un simple template avec un peu de logique géré par Liquid.&lt;/p&gt;
+
+&lt;p&gt;Et enfin, dernière petite chose, l’ajout d’un &lt;a href=&quot;http://carlosbecker.com/posts/jekyll-reading-time-without-plugins/&quot;&gt;temps de lecture estimé&lt;/a&gt; pour que le visiteur puisse en un coup d’oeil savoir si l’article sera long ou rapide à lire et ainsi décider si il a le temps de le lire immédiatement ou alors plus tard.&lt;/p&gt;
+
+&lt;h2 id=&quot;done-is-better-than-perfect&quot;&gt;Done is better than perfect&lt;/h2&gt;
+
+&lt;p&gt;Pour terminer, j’aimerais vous parler de la philosophie que j’ai décidé de suivre. J’ai toujours eu le fâcheux défaut de vouloir mettre en ligne et montrer des choses qui étaient totalement terminées. Cette tendance a souvent eu raison de tout ce que j’entreprenais, je me décourageais car je n’arriverais pas à être pleinement satisfait et je ne voyais pas la fin. Surtout lorsqu’il s’agissait de projets personnels, il n’y a pas pire client que soi-même !&lt;/p&gt;
+
+&lt;p&gt;Cette fois, j’ai décidé de créer quelque chose que j’améliorerais en continu, comme ils disent de l’autre côté de l’Atlantique &lt;em&gt;Done is better than perfect&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Entendez par là que la peinture est encore fraîche et qu’il manque même la deuxième couche à certains endroits bien que cette première version dispose déjà de fondations solides. Des améliorations verront le jour au fur et à mesure, vous pourrez suivre tout ça directement sur le &lt;a href=&quot;https://github.com/chrishrmnn/chrishrmnn.github.io/tree/source&quot;&gt;dépôt Github&lt;/a&gt;. Si vous rencontrez des soucis où que vous souhaitez proposer des améliorations, n’hésitez pas à &lt;a href=&quot;http://www.github.com/chrishrmnn&quot;&gt;ouvrir un ticket&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sachez aussi que je vais profiter de cet espace pour réaliser quelques expérimentations sur différents sujets. Si vous naviguez avec un navigateur ancien, ne soyez pas étonné si tout n’est pas parfait.&lt;/p&gt;
+
+&lt;p&gt;Bravo, vous êtes arrivé jusqu’à la fin ! Il faut dire que je ne vous ai pas épargné pour ce premier article avec plus de 2100 mots ! Je vous rassure, ils ne seront pas tous aussi long ! J’espère qu’il vous aura intéressé et n’hésitez pas à me faire vos retours.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 14 Jan 2016 21:01:38 +0100</pubDate>
+        <link>http://blog.christophe-hermann.fr/2016/01/fond-forme.html</link>
+        <guid isPermaLink="true">http://blog.christophe-hermann.fr/2016/01/fond-forme.html</guid>
+        
+        
+        <category>front-end</category>
+        
       </item>
-    {% endfor %}
+    
   </channel>
 </rss>

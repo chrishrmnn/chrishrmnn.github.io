@@ -1,20 +1,25 @@
----
-sitemap: false
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
+  
   <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <loc>http://blog.christophe-hermann.fr/2016/01/fond-forme.html</loc>
+    <lastmod>2016-01-14T21:01:38+01:00</lastmod>
   </url>
-  {% endfor %}
-  {% for page in site.pages %}
-  {% if page.sitemap != false %}
+  
+  
+  
+  
+  
   <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    <loc>http://blog.christophe-hermann.fr/a-propos/</loc>
+    <lastmod>2016-01-14T21:01:38+01:00</lastmod>
   </url>
-  {% endif %}
-  {% endfor %}
+  
+  
+  
+  
+  
+  
+  
+  
 </urlset>

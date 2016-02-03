@@ -1,7 +1,0 @@
-{% assign words = include.content | number_of_words %}
-
-{% if words < 360 %}
-	1 <abbr title="minute">min.</abbr>
-{% else %}
-	{{ words | divided_by:180 }} <abbr title="minutes">min.</abbr>
-{% endif %}
